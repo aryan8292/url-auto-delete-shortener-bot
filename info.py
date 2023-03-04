@@ -12,8 +12,8 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '13290427'))
+API_HASH = environ.get('API_HASH', 'c33b2f280810fc2f60a6387a4c4217f2')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
@@ -22,7 +22,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/b806ad314d0c415571bde.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1745243508 5079629749').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -37,7 +37,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegramm_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001614391732'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'search_zone_support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
